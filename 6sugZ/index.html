@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>跳转中...</title>
+  <meta http-equiv="refresh" content="5;url=https://www.bilibili.com/video/BV1pP4y167Gd/?vd_source=235c5dde8cf32ababea03d8f444d8c32">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      font-size: 32px;
+      color: #336699;
+      margin-bottom: 20px;
+      /* Animation: Bounce */
+      animation: bounce 1s infinite;
+    }
+    p {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    a {
+      color: #336699;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #FF0000;
+    }
+    .advertisement-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .advertisement {
+      margin: 10px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      width: 250px;
+    }
+    .advertisement img {
+      max-width: 100%;
+      height: auto;
+    }
+    #countdown {
+      font-size: 24px;
+      color: #FF0000;
+      margin-bottom: 20px;
+      /* Animation: FadeIn */
+      animation: fadeIn 2s;
+    }
+    .menu {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .menu-item {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #336699;
+    }
+    .menu-item:hover {
+      color: #FF0000;
+    }
+
+    /* Animation Keyframes */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <a class="menu-item" href="/">首页</a>
+    <a class="menu-item" href="https://blog.alone-hk.cn">博客</a>
+    <a class="menu-item" href="https://shop.alone-hk.cn">商店</a>
+    <a class="menu-item" href="https://front.alone-hk.cn">导航</a>
+    <a class="menu-item" href="https://drive.alone-hk.cn">资源</a>
+    <a class="menu-item" href="https://vincent-google.eu.org/">谷歌</a>
+    <a class="menu-item" href="https://audio-game.alone-hk.cn/">音游</a>
+    <a class="menu-item" href="https://short.alone-hk.cn">短网址</a>
+    <a class="menu-item" href="https://team.alone-hk.cn">团队</a>
+    <a class="menu-item" href="https://home-page.alone-hk.cn">搜索</a>
+  </div>
+
+  <!-- 倒计时 -->
+  <p id="countdown">跳转倒计时：5 秒</p>
+
+  <h1>正在跳转...</h1>
+  <p>如果页面没有自动跳转，请点击下面的链接：</p>
+  <a href="https://www.bilibili.com/video/BV1pP4y167Gd/?vd_source=235c5dde8cf32ababea03d8f444d8c32">https://www.bilibili.com/video/BV1pP4y167Gd/?vd_source=235c5dde8cf32ababea03d8f444d8c32</a>
+
+  <!-- 添加位置和图片 -->
+  <div class="advertisement-container">
+    <div class="advertisement">
+      <h2>广告位1</h2>
+      <p>这里是您可以展示广告的位置。</p>
+      <a href="https://example.com/"><!-- <img src="https://example.com/advertisement1.jpg" alt="广告图片1"> --> </a>
+    </div>
+    <div class="advertisement">
+      <h2>广告位2</h2>
+      <p>这里是您可以展示广告的位置。</p>
+      <a href="https://example.com/"><!-- <img src="https://example.com/advertisement2.jpg" alt="广告图片2"> --> </a>
+    </div>
+    <!-- Add more advertisement positions with <div class="advertisement"> and <a> tags -->
+    <!-- Replace the image URLs in the <img> tags with the actual advertisement images -->
+  </div>
+
+  <!-- Busuanzi Website Statistics -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <span id="busuanzi_container_page_pv">
+    本文总点击量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+
+  <script>
+    // 设置初始倒计时时间
+    let timeLeft = 5;
+
+    // 更新倒计时显示
+    const countdownDisplay = document.getElementById("countdown");
+    const countdownInterval = setInterval(() => {
+      timeLeft--;
+      countdownDisplay.textContent = `跳转倒计时：${timeLeft} 秒`;
+
+      // 如果倒计时结束，清除计时器并执行重定向
+      if (timeLeft <= 0) {
+        clearInterval(countdownInterval);
+        window.location.href = "https://www.bilibili.com/video/BV1pP4y167Gd/?vd_source=235c5dde8cf32ababea03d8f444d8c32";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
