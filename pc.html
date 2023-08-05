@@ -93,49 +93,14 @@
       }
     }
 
-    /* 移动端样式（屏幕宽度最大为 600px） */
-    @media (max-width: 600px) {
-      body {
-        margin: 10px;
-        font-size: 14px;
-      }
-      h1 {
-        font-size: 24px;
-        margin-bottom: 15px;
-      }
-      p {
-        font-size: 14px;
-        margin-bottom: 8px;
-      }
-      .advertisement-container {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 30px;
-      }
-      .advertisement {
-        width: 100%;
-        max-width: 250px;
-        margin: 10px 0;
-      }
-      .advertisement img {
-        max-width: 100%;
-        height: auto;
-      }
-      #countdown {
-        font-size: 18px;
-        margin-bottom: 15px;
-      }
+    /* PC端自定义样式 */
+    @media (min-width: 601px) {
+      /* 您可以在此处添加针对PC端的样式调整 */
       .menu {
-        font-size: 14px;
-        margin-bottom: 15px;
-      }
-      .menu-item {
-        margin-right: 0;
-        margin-bottom: 5px;
         display: block;
       }
-      .menu-item:hover {
-        color: #FF0000;
+      #mobile-menu {
+        display: none;
       }
     }
   </style>
@@ -173,5 +138,17 @@
   </div>
 
   <!-- 其他内容保持不变 -->
+
+  <!-- 移动端的 JavaScript 部分 -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      if (menu.style.display === "none") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>

@@ -1,79 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>短链接主页</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 20px;
-    }
-    h1 {
-      font-size: 2rem;
-      color: #333;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 1.5rem;
-    }
-    .menu {
-      margin-top: 1.5rem;
-    }
-    .menu-item {
-      text-decoration: none;
-      color: #333;
-      font-size: 1rem;
-      margin: 0.5rem;
-      transition: color 0.3s;
-    }
-    .menu-item:hover {
-      color: #007BFF;
-    }
-
-    /* Media Query for Mobile Devices */
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-      p {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-      }
-      .menu {
-        margin-top: 1rem;
-      }
-      .menu-item {
-        font-size: 0.8rem;
-        margin: 0.3rem;
+  <script>
+    // 检测用户设备类型
+    function detectDevice() {
+      const userAgent = navigator.userAgent;
+      if (/Mobi|Android/i.test(userAgent)) {
+        // 移动设备
+        window.location.href = 'mobile.html'; // 移动端页面
+      } else {
+        // 非移动设备（PC）
+        window.location.href = 'pc.html'; // PC端页面
       }
     }
-  </style>
+  </script>
 </head>
-<body>
-  <h1>欢迎来到短链接主页</h1>
-  <p>这里是一个简单的短链接主页。</p>
-
-  <!-- 添加站长其他项目说明 -->
-  <p>以下是站长的其他项目，感谢支持↓</p>
-
-  <!-- 添加其他网站链接 -->
-  <div class="menu">
-    <a class="menu-item" href="https://www.alone-hk.cn">主页</a>
-    <a class="menu-item" href="https://forum.alone-hk.cn">论坛</a>
-    <a class="menu-item" href="https://blog.alone-hk.cn">博客</a>
-    <a class="menu-item" href="https://shop.alone-hk.cn">商店</a>
-    <a class="menu-item" href="https://front.alone-hk.cn">导航</a>
-    <a class="menu-item" href="https://drive.alone-hk.cn">资源</a>
-    <a class="menu-item" href="https://google.nextwonder.link/">谷歌</a>
-    <a class="menu-item" href="https://audio-game.alone-hk.cn/">音游</a>
-    <a class="menu-item" href="https://short.alone-hk.cn">短网址</a>
-    <a class="menu-item" href="https://team.alone-hk.cn">团队</a>
-    <a class="menu-item" href="https://home-page.alone-hk.cn">搜索</a>
-  </div>
+<body onload="detectDevice()">
+  正在检测设备类型，请稍候...
 </body>
 </html>

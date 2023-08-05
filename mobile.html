@@ -93,68 +93,13 @@
       }
     }
 
-    /* 移动端样式（屏幕宽度最大为 600px） */
+    /* 移动端自定义样式 */
     @media (max-width: 600px) {
-      body {
-        margin: 10px;
-        font-size: 14px;
-      }
-      h1 {
-        font-size: 24px;
-        margin-bottom: 15px;
-      }
-      p {
-        font-size: 14px;
-        margin-bottom: 8px;
-      }
-      .advertisement-container {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 30px;
-      }
-      .advertisement {
-        width: 100%;
-        max-width: 250px;
-        margin: 10px 0;
-      }
-      .advertisement img {
-        max-width: 100%;
-        height: auto;
-      }
-      #countdown {
-        font-size: 18px;
-        margin-bottom: 15px;
-      }
-      .menu {
-        font-size: 14px;
-        margin-bottom: 15px;
-      }
-      .menu-item {
-        margin-right: 0;
-        margin-bottom: 5px;
-        display: block;
-      }
-      .menu-item:hover {
-        color: #FF0000;
-      }
+      /* 您可以在此处添加针对移动端的样式调整 */
     }
   </style>
 </head>
 <body>
-  <!-- PC端菜单 -->
-  <div class="menu">
-    <a class="menu-item" href="/">首页</a>
-    <a class="menu-item" href="https://blog.alone-hk.cn">博客</a>
-    <a class="menu-item" href="https://shop.alone-hk.cn">商店</a>
-    <a class="menu-item" href="https://front.alone-hk.cn">导航</a>
-    <a class="menu-item" href="https://drive.alone-hk.cn">资源</a>
-    <a class="menu-item" href="https://vincent-google.eu.org/">谷歌</a>
-    <a class="menu-item" href="https://audio-game.alone-hk.cn/">音游</a>
-    <a class="menu-item" href="https://short.alone-hk.cn">短网址</a>
-    <a class="menu-item" href="https://team.alone-hk.cn">团队</a>
-    <a class="menu-item" href="https://home-page.alone-hk.cn">搜索</a>
-  </div>
-
   <!-- 移动端菜单按钮 -->
   <div class="menu" id="mobile-menu">
     <a class="menu-item" href="javascript:void(0);" onclick="toggleMenu()">展开菜单</a>
@@ -172,6 +117,49 @@
     </div>
   </div>
 
-  <!-- 其他内容保持不变 -->
+  <!-- 倒计时 -->
+  <p id="countdown">跳转倒计时：5 秒</p>
+
+  <h1>正在跳转...</h1>
+  <p>如果页面没有自动跳转，请点击下面的链接：</p>
+  <a href="https://youtu.be/rQ9Sq9E6ga4">https://youtu.be/rQ9Sq9E6ga4</a>
+
+  <!-- 添加位置和图片 -->
+  <div class="advertisement-container">
+    <div class="advertisement">
+      <h2>广告位1</h2>
+      <p>这里是您可以展示广告的位置。</p>
+      <a href="https://example.com/"><!-- <img src="https://example.com/advertisement1.jpg" alt="广告图片1"> --> </a>
+    </div>
+    <div class="advertisement">
+      <h2>广告位2</h2>
+      <p>这里是您可以展示广告的位置。</p>
+      <a href="https://example.com/"><!-- <img src="https://example.com/advertisement2.jpg" alt="广告图片2"> --> </a>
+    </div>
+  </div>
+
+  <!-- Busuanzi Website Statistics -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <span id="busuanzi_container_page_pv">
+    本文总点击量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+
+  <script>
+    // 设置初始倒计时时间
+    let timeLeft = 5;
+
+    // 更新倒计时显示
+    const countdownDisplay = document.getElementById("countdown");
+    const countdownInterval = setInterval(() => {
+      timeLeft--;
+      countdownDisplay.textContent = `跳转倒计时：${timeLeft} 秒`;
+
+      // 如果倒计时结束，清除计时器并执行重定向
+      if (timeLeft <= 0) {
+        clearInterval(countdownInterval);
+        window.location.href = "https://youtu.be/rQ9Sq9E6ga4";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
